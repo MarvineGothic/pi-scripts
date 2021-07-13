@@ -20,3 +20,5 @@ echo "net.ipv4.ip_forward=1" >> /etc/sysctl.d/routed-ap.conf
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 
 netfilter-persistent save
+
+systemctl reboot
